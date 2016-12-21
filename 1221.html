@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hexagon</title>
+
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <style>
+    .container {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        perspective: 1000px;
+        margin: auto;
+        margin-top: 50px;
+  
+    }
+    .carousel {width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 2s infinite linear;
+    }
+    
+    .carousel .plane {width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(60deg,#666,#ccc)}
+    
+    .carousel .plane:nth-of-type(1) {transform:  translateZ(173px);}
+    .carousel .plane:nth-of-type(2) {transform: rotateY(60deg) translateZ(173px);}
+    .carousel .plane:nth-of-type(3) {transform: rotateY(120deg) translateZ(173px);}
+    .carousel .plane:nth-of-type(4) {transform: rotateY(180deg) translateZ(173px);}
+    .carousel .plane:nth-of-type(5) {transform: rotateY(240deg) translateZ(173px);}
+    .carousel .plane:nth-of-type(6) {transform: rotateY(300deg) translateZ(173px);}
+
+
+/*
+    @keyframes rotate {
+        0% {transform: rotateY(0deg)}
+        10% {transform: rotateY(0deg)}
+        20% {transform: rotateY(60deg)}
+        30% {transform: rotateY(60deg)}
+        40% {transform: rotateY(120deg)}
+        50% {transform: rotateY(120deg)}
+        60% {transform: rotateY(180deg)}
+        70% {transform: rotateY(180deg)}
+        80% {transform: rotateY(240deg)}
+        90% {transform: rotateY(240deg)}
+        100% {transform: rotateY(300deg)}
+    }
+*/
+
+        @keyframes rotate {
+        0% {transform: rotateY(0deg)}
+        8.3% {transform: rotateY(0deg)}
+        16.6% {transform: rotateY(60deg)}
+        24.9% {transform: rotateY(60deg)}
+        33.2% {transform: rotateY(120deg)}
+        41.5% {transform: rotateY(120deg)}
+        49.5% {transform: rotateY(180deg)}
+        58.1% {transform: rotateY(180deg)}
+        66.4% {transform: rotateY(240deg)}
+        74.7% {transform: rotateY(240deg)}
+        83% {transform: rotateY(300deg)}
+        91.3% {transform: rotateY(300deg)}
+        100% {transform: rotateY(360deg)}
+    }
+    
+     .container2 {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        perspective: 1000px;
+        margin: auto;
+        margin-top: 50px;
+  
+    }
+    .carousel2 {width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 2s infinite linear;
+    }
+    
+    .carousel2 .plane2 {width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(60deg,#666,#ccc)}
+    
+    .carousel2 .plane2:nth-of-type(1) {transform:  translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(2) {transform: rotateY(45deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(3) {transform: rotateY(90deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(4) {transform: rotateY(135deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(5) {transform: rotateY(180deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(6) {transform: rotateY(225deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(7) {transform: rotateY(270deg) translateZ(241px);}
+    .carousel2 .plane2:nth-of-type(8) {transform: rotateY(315deg) translateZ(241px);}
+
+    @keyframes rotate2 {
+        0% {transform: rotateY(0deg)}
+        6.7% {transform: rotateY(0deg)}
+        13.3% {transform: rotateY(45deg)}
+        19.9% {transform: rotateY(45deg)}
+        26.5% {transform: rotateY(90deg)}
+        32.2% {transform: rotateY(90deg)}
+        39.9% {transform: rotateY(135deg)}
+        46.6% {transform: rotateY(135deg)}
+        53.3% {transform: rotateY(180deg)}
+        60% {transform: rotateY(180deg)}
+        66.7% {transform: rotateY(225deg)}
+        73.4% {transform: rotateY(225deg)}
+        80.1% {transform: rotateY(270deg)}
+        86.8% {transform: rotateY(270deg)}
+        93.5% {transform: rotateY(315deg)}
+        100% {transform: rotateY(315deg)}
+    }
+    
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-default" >
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        <div class="container">
+        <div class="carousel">
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/1" alt=""></div>
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/2" alt=""></div>
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/3" alt=""></div>
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/4" alt=""></div>
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/5" alt=""></div>
+            <div class="plane"><img src="http://lorempicsum.com/simpsons/200/100/6" alt=""></div>
+        </div>
+    </div>
+    
+    <div class="container2">
+        <div class="carousel2">
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/1" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/2" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/3" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/4" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/5" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/simpsons/200/100/6" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/up/200/100/1" alt=""></div>
+            <div class="plane2"><img src="http://lorempicsum.com/up/200/100/2" alt=""></div>
+        </div>
+    </div>
+    
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 2</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    
+    <button type="button" class="btn btn-primary">Button Copy</button>
+    
+    <a href="#" class="btn btn-primary btn-lg">Button a ref</a>
+    
+    <table class="table">
+        <tr>
+            <td>Table</td>
+                        <td>Table</td>
+
+        </tr>
+        <tr>
+            <td>Table</td>
+        </tr>
+    </table>
+    
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <h1>2-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <h1>2-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <h1>3-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <h1>3-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <h1>3-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <h1>4-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1>4-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1>4-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1>4-Column</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic mollitia, iste minus corrupti. Quos at, accusamus ipsum eius, molestias, quia a nulla velit cupiditate non officiis qui veritatis et.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
